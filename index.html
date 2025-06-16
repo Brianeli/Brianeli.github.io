@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>Add commentMore actions
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,64 +27,7 @@
             font-weight: 700;
             letter-spacing: -0.5px;
         }
-        @keyframes zoom-in {
-        0% {
-            transform: translateZ(-1000px);
-            opacity: 0;
-            filter: blur(5px);
-        }
-        50% {
-            transform: translateZ(0px);
-            opacity: 1;
-            filter: blur(0px);
-        }
-        100% {
-            transform: translateZ(1000px);
-            opacity: 0;
-            filter: blur(5px);
-        }
-    }
-
-    .security-grid {
-        block-size: 100svh;
-        perspective: 1000px;
-        transform-style: preserve-3d;
-        display: grid;
-        grid: repeat(4, 25dvh) / repeat(4, 25dvw);
-        place-items: center;
-        position: sticky;
-        top: 0;
-        overflow: clip;
-        z-index: 10;
-    }
-
-    .security-grid > .grid-item {
-        transform-style: preserve-3d;
-        font-size: 2.5vmin;
-        font-weight: 500;
-        color: var(--secondary-silver);
-        text-wrap: nowrap;
-        padding: 1rem;
-        background: rgba(24, 24, 24, 0.9);
-        border-radius: 8px;
-        border: 1px solid var(--secondary-silver);
-    }
-
-    @supports (animation-timeline: scroll()) {
-        @media (prefers-reduced-motion: no-preference) {
-            .security-grid > .grid-item {
-                animation: zoom-in linear both;
-                animation-timeline: scroll(root block);
-                will-change: transform, opacity, filter;
-            }
-        }
-    }
-
-    /* Animation ranges for grid items (same as example but condensed) */
-    .grid-item:nth-of-type(1) { animation-range: 40% 50% }
-    .grid-item:nth-of-type(2) { animation-range: 20% 30% }
-    /* ... continue nth-of-type rules from example ... */
-</style>
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -159,24 +102,6 @@
                      class="rounded-lg shadow-2xl max-h-96 object-cover">
             </div>
         </div>
-        <section class="security-grid">
-    <div class="grid-item">Zero Trust</div>
-    <div class="grid-item">IAM</div>
-    <div class="grid-item">SOC2 Compliance</div>
-    <div class="grid-item">GDPR</div>
-    <div class="grid-item">HIPAA</div>
-    <div class="grid-item">DevSecOps</div>
-    <div class="grid-item">Cloud Audit</div>
-    <div class="grid-item">Pen Testing</div>
-    <div class="grid-item">Container Security</div>
-    <div class="grid-item">Network Security</div>
-    <div class="grid-item special"><b>Secure Cloud</b></div>
-    <div class="grid-item">Data Encryption</div>
-    <div class="grid-item">Vulnerability Mgmt</div>
-    <div class="grid-item">Incident Response</div>
-    <div class="grid-item">Risk Assessment</div>
-    <div class="grid-item">Compliance Monitoring</div>
-</section>
     </section>
 
     <!-- Trust Badges -->
