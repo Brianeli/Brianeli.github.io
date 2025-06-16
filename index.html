@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>More actions
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,85 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-black: #181818;
-            --secondary-silver: #999B9B;
-            --accent-white: #FFFFFF;
-            --gray-700: #616161;
-            --gray-400: #BDBDBD;
+            --primary-blue: #0a2463;
+            --secondary-blue: #3e7cb1;
+            --accent-blue: #dbe4ee;
         }
         body {
             font-family: 'IBM Plex Sans', sans-serif;
-            background-color: var(--primary-black);
-            color: var(--accent-white);
         }
         .hero-gradient {
-            background: linear-gradient(135deg, var(--primary-black) 0%, var(--secondary-silver) 100%);
-        }
-        .service-card {
-            background: var(--secondary-silver);
-            color: var(--primary-black);
-            border-radius: 8px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 2px 8px rgba(24, 24, 24, 0.08);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
         }
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(24, 24, 24, 0.2);
+            box-shadow: 0 10px 20px rgba(10, 36, 99, 0.2);
         }
         .logo-text {
             font-weight: 700;
             letter-spacing: -0.5px;
-            color: var(--secondary-silver);
-            text-shadow: 1px 1px 2px var(--primary-black);
-        }
-        /* Navigation & Footer */
-        .bg-primary, .bg-black {
-            background-color: var(--primary-black) !important;
-        }
-        .bg-secondary, .bg-silver {
-            background-color: var(--secondary-silver) !important;
-        }
-        .bg-accent, .bg-white {
-            background-color: var(--accent-white) !important;
-        }
-        .text-primary, .text-black {
-            color: var(--primary-black) !important;
-        }
-        .text-secondary, .text-silver {
-            color: var(--secondary-silver) !important;
-        }
-        .text-accent, .text-white {
-            color: var(--accent-white) !important;
-        }
-        .text-gray-700 {
-            color: var(--gray-700) !important;
-        }
-        .text-gray-400 {
-            color: var(--gray-400) !important;
-        }
-        /* Buttons and links */
-        a, .btn {
-            color: var(--accent-white);
-            background-color: var(--primary-black);
-            border: 1px solid var(--secondary-silver);
-            transition: background 0.2s, color 0.2s;
-        }
-        a:hover, .btn:hover {
-            color: var(--primary-black);
-            background-color: var(--secondary-silver);
-        }
-        /* Section backgrounds */
-        .section-dark {
-            background-color: var(--primary-black);
-            color: var(--accent-white);
-        }
-        .section-light {
-            background-color: var(--accent-white);
-            color: var(--primary-black);
-        }
-        .section-silver {
-            background-color: var(--secondary-silver);
-            color: var(--primary-black);
         }
     </style>
     <script>
@@ -95,11 +33,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#181818',
-                        secondary: '#C0C0C0',
-                        accent: '#FFFFFF',
-                        'gray-700': '#616161',
-                        'gray-400': '#BDBDBD',
+                        primary: '#0a2463',
+                        secondary: '#3e7cb1',
+                        accent: '#dbe4ee',
                     },
                     fontFamily: {
                         sans: ['IBM Plex Sans', 'sans-serif'],
@@ -111,52 +47,53 @@
 </head>
 <body class="min-h-screen flex flex-col">
     <!-- Header/Navigation -->
-    <header class="bg-primary text-accent shadow-md">
+    <header class="bg-primary text-white shadow-md">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                         <i class="fas fa-shield-alt text-primary text-xl"></i>
                     </div>
-                    <span class="text-accent text-2xl font-bold logo-text">Baz&Bourke</span>
+                    <span class="text-white text-2xl font-bold logo-text">Baz&Bourke</span>
                 </div>
-                
+
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden focus:outline-none">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
-                
+
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-accent hover:text-secondary font-medium transition">Home</a>
-                    <a href="Services.html" class="text-accent hover:text-secondary font-medium transition">Services</a>
-                    <a href="#about" class="text-accent hover:text-secondary font-medium transition">About</a>
-                    <a href="#case-studies" class="text-accent hover:text-secondary font-medium transition">Case Studies</a>
-                    <a href="#contact" class="text-accent hover:text-secondary font-medium transition">Contact</a>
+                    <a href="#home" class="text-white hover:text-accent font-medium transition">Home</a>
+                    <a href="Services.html" class="text-white hover:text-accent font-medium transition">Services</a>
+                    <a href="#about" class="text-white hover:text-accent font-medium transition">About</a>
+                    <a href="#case-studies" class="text-white hover:text-accent font-medium transition">Case Studies</a>
+                    <a href="#contact" class="text-white hover:text-accent font-medium transition">Contact</a>
                 </nav>
             </div>
-            
+
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2">
-                <a href="#home" class="block py-2 text-accent hover:text-secondary">Home</a>
-                <a href="#services" class="block py-2 text-accent hover:text-secondary">Services</a>
-                <a href="#about" class="block py-2 text-accent hover:text-secondary">About</a>
-                <a href="#case-studies" class="block py-2 text-accent hover:text-secondary">Case Studies</a>
-                <a href="#contact" class="block py-2 text-accent hover:text-secondary">Contact</a>
+                <a href="#home" class="block py-2 text-white hover:text-accent">Home</a>
+                <a href="#services" class="block py-2 text-white hover:text-accent">Services</a>
+                <a href="#about" class="block py-2 text-white hover:text-accent">About</a>
+                <a href="#case-studies" class="block py-2 text-white hover:text-accent">Case Studies</a>
+                <a href="#contact" class="block py-2 text-white hover:text-accent">Contact</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-gradient text-accent py-5 md:py-10">
+    <section id="home" class="hero-gradient text-white py-16 md:py-24">
+    <section id="home" class="hero-gradient text-white py-5 md:py-10">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-8 md:mb-0">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Secure Cloud Architecture for the Modern Enterprise</h1>
                 <p class="text-xl mb-8 leading-relaxed">Expert cloud security architects delivering bespoke solutions that protect your digital assets while enabling business growth.</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#contact" class="bg-accent text-primary px-6 py-3 rounded-lg font-semibold hover:bg-secondary hover:text-primary transition duration-300 text-center">Get a Consultation</a>
-                    <a href="#services" class="border-2 border-accent text-accent px-6 py-3 rounded-lg font-semibold hover:bg-accent hover:text-primary transition duration-300 text-center">Explore Services</a>
+                    <a href="#contact" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-accent transition duration-300 text-center">Get a Consultation</a>
+                    <a href="#services" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300 text-center">Explore Services</a>
                 </div>
             </div>
             <div class="md:w-1/2 flex justify-center">
@@ -171,7 +108,7 @@
     <section class="bg-accent py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0">
-                <p class="text-gray-700 font-medium">Trusted by industry leaders:</p>
+                <p class="text-gray-600 font-medium">Trusted by industry leaders:</p>
                 <div class="flex space-x-6 md:space-x-12 items-center">
                     <i class="fab fa-microsoft text-3xl text-gray-700"></i>
                     <i class="fab fa-aws text-3xl text-gray-700"></i>
@@ -183,22 +120,157 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 bg-accent">
+    <section id="services" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Cloud Security Services</h2>
-                <p class="text-gray-700 max-w-3xl mx-auto">Comprehensive security solutions tailored to your cloud infrastructure needs, whether you're just beginning your cloud journey or optimizing existing deployments.</p>
+                <p class="text-gray-600 max-w-3xl mx-auto">Comprehensive security solutions tailored to your cloud infrastructure needs, whether you're just beginning your cloud journey or optimizing existing deployments.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service Cards (unchanged content, colors updated via CSS) -->
-                <!-- ...repeat service cards as in original... -->
+                <!-- Service 1 -->
+                <div class="bg-accent rounded-lg p-6 shadow-md service-card transition duration-300">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-cloud text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Cloud Architecture Design</h3>
+                    <p class="text-gray-700 mb-4">Secure-by-design cloud infrastructure built with industry best practices to protect your assets from the ground up.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Multi-cloud/hybrid solutions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Zero-trust network architecture</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Compliance-focused design</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-accent rounded-lg p-6 shadow-md service-card transition duration-300">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Security Assessment</h3>
+                    <p class="text-gray-700 mb-4">Comprehensive analysis of your current cloud environment to identify vulnerabilities and compliance gaps.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Penetration testing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Configuration audits</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Risk assessment reports</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-accent rounded-lg p-6 shadow-md service-card transition duration-300">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-lock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Compliance Management</h3>
+                    <p class="text-gray-700 mb-4">Expert guidance through complex regulatory requirements to ensure your cloud meets all necessary standards.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>GDPR, HIPAA, SOC2 support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Policy development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Continuous compliance monitoring</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-accent rounded-lg p-6 shadow-md service-card transition duration-300">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">DevSecOps Integration</h3>
+                    <p class="text-gray-700 mb-4">Embed security into your development lifecycle with automated tools and processes.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>CI/CD pipeline security</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Infrastructure as Code security</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Container security</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-accent rounded-lg p-6 shadow-md service-card transition duration-300">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-shield text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Identity & Access Management</h3>
+                    <p class="text-gray-700 mb-4">Strategic control over who has access to what within your cloud environments.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Privileged access management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Multi-factor authentication</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Role-based access control</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-accent rounded-lg p-6 shadow-md service-card transition duration-300">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-headset text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Managed Cloud Security</h3>
+                    <p class="text-gray-700 mb-4">Ongoing protection with our team of experts monitoring and maintaining your cloud security.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>24/7 threat monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Incident response</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Security updates & patching</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-secondary text-primary">
+    <section id="about" class="py-16 bg-secondary text-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
@@ -212,7 +284,7 @@
                     <p class="mb-6 leading-relaxed">We take a strategic approach to cloud security, balancing robust protection with operational efficiency and business agility. Our solutions are never one-size-fits-all - we tailor our approach to your specific technical and regulatory requirements.</p>
                     <div class="flex items-center space-x-4">
                         <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                            <i class="fas fa-award text-xl text-accent"></i>
+                            <i class="fas fa-award text-xl"></i>
                         </div>
                         <div>
                             <h3 class="font-bold">Certified Experts</h3>
@@ -225,103 +297,229 @@
     </section>
 
     <!-- Case Studies Section -->
-    <section id="case-studies" class="py-16 bg-accent">
+    <section id="case-studies" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Success Stories</h2>
-                <p class="text-gray-700 max-w-3xl mx-auto">See how we've transformed cloud security for organizations across industries.</p>
+                <p class="text-gray-600 max-w-3xl mx-auto">See how we've transformed cloud security for organizations across industries.</p>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Case Study Cards (unchanged content, colors updated via CSS) -->
-                <!-- ...repeat case studies as in original... -->
+                <!-- Case Study 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Financial Services" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-2">
+                                <i class="fas fa-chart-line text-white text-sm"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-600">FINANCIAL SERVICES</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Global Bank Cloud Migration</h3>
+                        <p class="text-gray-600 mb-4">Secured a multi-cloud environment for a top 10 global bank handling 50M+ daily transactions.</p>
+                        <div class="flex items-center text-sm text-secondary">
+                            <span class="mr-2"><i class="fas fa-arrow-up"></i> 99.99% uptime</span>
+                            <span><i class="fas fa-shield-alt"></i> Zero breaches</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Healthcare" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-2">
+                                <i class="fas fa-heartbeat text-white text-sm"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-600">HEALTHCARE</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">HIPAA-Compliant Cloud Infrastructure</h3>
+                        <p class="text-gray-600 mb-4">Designed and implemented a secure cloud environment for a regional hospital network.</p>
+                        <div class="flex items-center text-sm text-secondary">
+                            <span class="mr-2"><i class="fas fa-check-circle"></i> Full HIPAA compliance</span>
+                            <span><i class="fas fa-clock"></i> 72h faster deployments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Technology" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-2">
+                                <i class="fas fa-laptop-code text-white text-sm"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-600">TECHNOLOGY</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">SaaS Startup Security Foundation</h3>
+                        <p class="text-gray-600 mb-4">Built security into the DNA of a fast-growing SaaS platform from day one.</p>
+                        <div class="flex items-center text-sm text-secondary">
+                            <span class="mr-2"><i class="fas fa-lock"></i> 100% secure audit</span>
+                            <span><i class="fas fa-rocket"></i> Scaled to 1M users</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="py-16 bg-secondary">
+    <section class="py-16 bg-accent">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">What Our Clients Say</h2>
-                <p class="text-gray-700 max-w-3xl mx-auto">Don't just take our word for it - hear from organizations that have transformed their cloud security with our help.</p>
+                <p class="text-gray-600 max-w-3xl mx-auto">Don't just take our word for it - hear from organizations that have transformed their cloud security with our help.</p>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial Cards (unchanged content, colors updated via CSS) -->
-                <!-- ...repeat testimonials as in original... -->
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-500">CTO, FinTech Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Baz&Bourke completely transformed our cloud security posture. Their architecture recommendations not only made us more secure but actually improved our system performance by 40%."</p>
+                    <div class="mt-4 flex text-secondary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-sm text-gray-500">Director of IT, HealthNetwork</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"We needed to achieve HIPAA compliance in record time. The Baz&Bourke team not only delivered but also trained our staff so we could maintain compliance independently."</p>
+                    <div class="mt-4 flex text-secondary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">David Rodriguez</h4>
+                            <p class="text-sm text-gray-500">VP Engineering, RetailTech</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Their DevSecOps implementation saved us thousands of engineering hours and caught critical vulnerabilities before they reached production. Worth every penny."</p>
+                    <div class="mt-4 flex text-secondary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-primary text-accent">
+    <section class="py-16 bg-primary text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Secure Your Cloud?</h2>
             <p class="text-xl max-w-3xl mx-auto mb-8">Schedule a consultation with our cloud security architects to discuss your organization's specific needs.</p>
-            <a href="#contact" class="bg-accent text-primary px-8 py-4 rounded-lg font-bold hover:bg-secondary hover:text-primary transition duration-300 inline-block">Get Started Now</a>
+            <a href="#contact" class="bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-accent transition duration-300 inline-block">Get Started Now</a>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-accent">
+    <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
                     <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Contact Us</h2>
-                    <p class="text-gray-700 mb-8">Whether you're looking for a full security audit or just have questions about cloud security best practices, our team is ready to help.</p>
-                    
+                    <p class="text-gray-600 mb-8">Whether you're looking for a full security audit or just have questions about cloud security best practices, our team is ready to help.</p>
+
                     <div class="space-y-6">
                         <div class="flex items-start">
-                            <div class="w-10 h-10 bg-primary rounded-full flex-shrink-0 flex items-center justify-center text-accent mr-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex-shrink-0 flex items-center justify-center text-white mr-4">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-primary">Headquarters</h3>
-                                <p class="text-gray-700">123 Security Blvd, Suite 500<br>San Francisco, CA 94107</p>
+                                <h3 class="font-bold text-gray-800">Headquarters</h3>
+                                <p class="text-gray-600">123 Security Blvd, Suite 500<br>San Francisco, CA 94107</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
-                            <div class="w-10 h-10 bg-primary rounded-full flex-shrink-0 flex items-center justify-center text-accent mr-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex-shrink-0 flex items-center justify-center text-white mr-4">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-primary">Phone</h3>
-                                <p class="text-gray-700">+1 (415) 555-0192<br>Mon-Fri, 9am-5pm PST</p>
+                                <h3 class="font-bold text-gray-800">Phone</h3>
+                                <p class="text-gray-600">+1 (415) 555-0192<br>Mon-Fri, 9am-5pm PST</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
-                            <div class="w-10 h-10 bg-primary rounded-full flex-shrink-0 flex items-center justify-center text-accent mr-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex-shrink-0 flex items-center justify-center text-white mr-4">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-primary">Email</h3>
-                                <p class="text-gray-700">consulting@bazbourke.cloud</p>
+                                <h3 class="font-bold text-gray-800">Email</h3>
+                                <p class="text-gray-600">consulting@bazbourke.cloud</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="md:w-1/2 bg-secondary p-8 rounded-lg">
+
+                <div class="md:w-1/2 bg-accent p-8 rounded-lg">
                     <h3 class="text-2xl font-bold text-primary mb-6">Send Us a Message</h3>
                     <form>
                         <div class="mb-4">
-                            <label for="name" class="block text-primary font-medium mb-2">Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                         </div>
+
                         <div class="mb-4">
-                            <label for="email" class="block text-primary font-medium mb-2">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                         </div>
+
                         <div class="mb-4">
-                            <label for="company" class="block text-primary font-medium mb-2">Company</label>
-                            <input type="text" id="company" class="w-full px-4 py-3 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <label for="company" class="block text-gray-700 font-medium mb-2">Company</label>
+                            <input type="text" id="company" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                         </div>
+
                         <div class="mb-4">
-                            <label for="message" class="block text-primary font-medium mb-2">How Can We Help?</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">How Can We Help?</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-primary text-accent px-6 py-3 rounded-lg font-semibold hover:bg-secondary hover:text-primary transition duration-300">Send Message</button>
+
+                        <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -329,67 +527,71 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary text-accent py-12">
+    <footer class="bg-primary text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                             <i class="fas fa-shield-alt text-primary text-sm"></i>
                         </div>
-                        <span class="text-accent text-xl font-bold logo-text">Baz&Bourke</span>
+                        <span class="text-white text-xl font-bold logo-text">Baz&Bourke</span>
                     </div>
-                    <p class="text-secondary mb-4">Premier cloud security architecture consulting for the modern enterprise.</p>
+                    <p class="text-accent mb-4">Premier cloud security architecture consulting for the modern enterprise.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-accent hover:text-secondary transition"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-accent hover:text-secondary transition"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-accent hover:text-secondary transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
+
                 <div>
                     <h3 class="font-bold text-lg mb-4">Services</h3>
-                    <ul class="space-y-2 text-secondary">
-                        <li><a href="service.html" class="hover:text-accent transition">Cloud Architecture</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Security Assessments</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Compliance Management</a></li>
-                        <li><a href="#" class="hover:text-accent transition">DevSecOps</a></li>
-                        <li><a href="#" class="hover:text-accent transition">IAM Solutions</a></li>
+                    <ul class="space-y-2 text-accent">
+                        <li><a href="service.html" class="hover:text-white transition">Cloud Architecture</a></li>
+                        <li><a href="#" class="hover:text-white transition">Security Assessments</a></li>
+                        <li><a href="#" class="hover:text-white transition">Compliance Management</a></li>
+                        <li><a href="#" class="hover:text-white transition">DevSecOps</a></li>
+                        <li><a href="#" class="hover:text-white transition">IAM Solutions</a></li>
                     </ul>
                 </div>
+
                 <div>
                     <h3 class="font-bold text-lg mb-4">Company</h3>
-                    <ul class="space-y-2 text-secondary">
-                        <li><a href="#" class="hover:text-accent transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Case Studies</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Team</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Careers</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Blog</a></li>
+                    <ul class="space-y-2 text-accent">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white transition">Team</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
                     </ul>
                 </div>
+
                 <div>
                     <h3 class="font-bold text-lg mb-4">Resources</h3>
-                    <ul class="space-y-2 text-secondary">
-                        <li><a href="#" class="hover:text-accent transition">Whitepapers</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Webinars</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Security Tools</a></li>
-                        <li><a href="#" class="hover:text-accent transition">FAQ</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Contact Us</a></li>
+                    <ul class="space-y-2 text-accent">
+                        <li><a href="#" class="hover:text-white transition">Whitepapers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Webinars</a></li>
+                        <li><a href="#" class="hover:text-white transition">Security Tools</a></li>
+                        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-opacity-20 border-accent pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-secondary text-sm mb-4 md:mb-0">© 2025 Baz&Bourke Cloud Solutions. All rights reserved.</p>
+
+            <div class="border-t border-opacity-20 border-white pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-accent text-sm mb-4 md:mb-0">© 2025 Baz&Bourke Cloud Solutions. All rights reserved.</p>
                 <div class="flex space-x-6 text-sm">
-                    <a href="#" class="text-secondary hover:text-accent transition">Privacy Policy</a>
-                    <a href="#" class="text-secondary hover:text-accent transition">Terms of Service</a>
-                    <a href="#" class="text-secondary hover:text-accent transition">Cookies</a>
+                    <a href="#" class="text-accent hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-accent hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-accent hover:text-white transition">Cookies</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="hidden fixed bottom-8 right-8 w-12 h-12 bg-secondary rounded-full shadow-lg text-primary flex items-center justify-center hover:bg-opacity-90 transition duration-300">
+    <button id="back-to-top" class="hidden fixed bottom-8 right-8 w-12 h-12 bg-secondary rounded-full shadow-lg text-white flex items-center justify-center hover:bg-opacity-90 transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -402,7 +604,7 @@
 
         // Back to top button
         const backToTopButton = document.getElementById('back-to-top');
-        
+
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.remove('hidden');
@@ -410,7 +612,7 @@
                 backToTopButton.classList.add('hidden');
             }
         });
-        
+
         backToTopButton.addEventListener('click', function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
@@ -419,10 +621,10 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     targetElement.scrollIntoView({
