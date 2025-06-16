@@ -1,49 +1,459 @@
-<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services | Baz&Bourke Cloud Solutions</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baz&BourkeCS | Enterprise Cloud Security Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0ea5e9 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .cyber-pattern {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
 </head>
-<body class="bg-white text-gray-800 font-sans leading-relaxed">
-
-  <header class="bg-primary text-white py-6">
-    <div class="container mx-auto px-4">
-      <h1 class="text-3xl font-bold">Our Cloud Security Services</h1>
-      <p class="text-lg mt-2">Strategic protection for every stage of your cloud journey.</p>
-    </div>
-  </header>
-
-  <main class="py-16">
-    <div class="container mx-auto px-4 grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      
-      <!-- Service Card Template -->
-      <section class="bg-accent rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
-        <img src="assets/images/cloud-architecture.jpg" alt="Cloud Architecture Design" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <div class="flex items-center mb-4">
-            <i class="fas fa-cloud text-primary text-2xl mr-3"></i>
-            <h2 class="text-xl font-bold text-primary">Cloud Architecture Design</h2>
-          </div>
-          <p class="text-gray-700 mb-4">Secure-by-design infrastructures tailored for resilience, scalability, and compliance from the ground up.</p>
-          <ul class="space-y-2 text-gray-600">
-            <li><i class="fas fa-check text-secondary mr-2"></i>Multi-cloud & hybrid designs</li>
-            <li><i class="fas fa-check text-secondary mr-2"></i>Zero-trust architecture</li>
-            <li><i class="fas fa-check text-secondary mr-2"></i>Compliance-aware implementation</li>
-          </ul>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img class="h-12" src="https://via.placeholder.com/150x50?text=CloudShield" alt="CloudShield Pro Logo">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                            <a href="#" class="bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">Case Studies</a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">Get Security Audit</a>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-      </section>
+    </nav>
 
-      <section class="bg-accent rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
-        <img src="assets/images/security-assessment.jpg" alt="Security Assessment" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <div class="flex items-center mb-4">
-            <i class="fas fa-shield-alt text-primary text-2xl mr-3"></i>
-            <h2 class="text-xl font-bold text-primary">Security Assessment</h2>
-          </div>
-          <p class="text-gray-700 mb-4">Uncover hidden risks and gaps in your cloud posture with tailored audits and actionable reporting.</p>
-          <ul class="space-y-2 text-gray-600">
-            <li><i c
+    <!-- Hero Section -->
+    <div class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                Enterprise-Grade Cloud Security Services
+            </h1>
+            <p class="mt-6 max-w-3xl mx-auto text-xl">
+                World-class security architecture consulting with proven frameworks for AWS, Azure, and GCP environments.
+            </p>
+            <div class="mt-10 flex justify-center">
+                <a href="#services" class="bg-white text-blue-600 px-8 py-3 rounded-md text-lg font-semibold hover:bg-gray-100">
+                    Explore Services <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trusted By Section -->
+    <div class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-500 text-lg mb-8">
+                Trusted by security teams at:
+            </p>
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-6">
+                <div class="flex justify-center">
+                    <img class="h-12" src="https://via.placeholder.com/150x60?text=F500" alt="Fortune 500">
+                </div>
+                <div class="flex justify-center">
+                    <img class="h-12" src="https://via.placeholder.com/150x60?text=AWS" alt="AWS Partner">
+                </div>
+                <div class="flex justify-center">
+                    <img class="h-12" src="https://via.placeholder.com/150x60?text=Azure" alt="Microsoft Azure">
+                </div>
+                <div class="flex justify-center">
+                    <img class="h-12" src="https://via.placeholder.com/150x60?text=GCP" alt="Google Cloud">
+                </div>
+                <div class="flex justify-center">
+                    <img class="h-12" src="https://via.placeholder.com/150x60?text=SOC2" alt="SOC 2 Certified">
+                </div>
+                <div class="flex justify-center">
+                    <img class="h-12" src="https://via.placeholder.com/150x60?text=ISO27k" alt="ISO 27001 Certified">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="py-16 bg-gray-50 cyber-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Our <span class="text-blue-600">Expert-Level</span> Security Services
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Comprehensive security solutions designed by former cloud platform security leads
+                </p>
+            </div>
+
+            <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cloud Security Architecture">
+                        <div class="absolute inset-0 bg-blue-600 opacity-20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full">
+                                <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+                            </div>
+                            <span class="ml-3 text-sm font-semibold text-blue-600">ENTERPRISE SECURITY</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cloud Security Architecture Design</h3>
+                        <p class="text-gray-600 mb-4">
+                            Zero Trust architecture implementation with CIS benchmarks and NIST frameworks for your multi-cloud environment.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Custom IAM policies with least privilege principles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Network segmentation strategies</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Data encryption at rest and in transit</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-6 inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1563206767-5b18f218e8f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Compliance">
+                        <div class="absolute inset-0 bg-blue-600 opacity-20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full">
+                                <i class="fas fa-file-contract text-blue-600 text-xl"></i>
+                            </div>
+                            <span class="ml-3 text-sm font-semibold text-blue-600">COMPLIANCE</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Compliance & Governance</h3>
+                        <p class="text-gray-600 mb-4">
+                            Achieve and maintain compliance with SOC 2, ISO 27001, HIPAA, GDPR, and PCI-DSS through our proven frameworks.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Automated compliance monitoring</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Policy as Code implementation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Audit preparation and remediation</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-6 inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1563986768609-322da135ffff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="DevSecOps">
+                        <div class="absolute inset-0 bg-blue-600 opacity-20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full">
+                                <i class="fas fa-code text-blue-600 text-xl"></i>
+                            </div>
+                            <span class="ml-3 text-sm font-semibold text-blue-600">DEVSECOPS</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">DevSecOps Implementation</h3>
+                        <p class="text-gray-600 mb-4">
+                            Shift-left security with SAST, DAST, SCA, and IaC scanning integrated into your CI/CD pipelines.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Automated vulnerability scanning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Container security hardening</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Secrets management solutions</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-6 inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Threat Modeling">
+                        <div class="absolute inset-0 bg-blue-600 opacity-20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full">
+                                <i class="fas fa-bug text-blue-600 text-xl"></i>
+                            </div>
+                            <span class="ml-3 text-sm font-semibold text-blue-600">THREAT INTELLIGENCE</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Threat Modeling & Risk Assessment</h3>
+                        <p class="text-gray-600 mb-4">
+                            STRIDE-based threat modeling with MITRE ATT&CK framework alignment for comprehensive risk analysis.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Attack surface analysis</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Cloud-specific threat scenarios</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Remediation roadmap</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-6 inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Incident Response">
+                        <div class="absolute inset-0 bg-blue-600 opacity-20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full">
+                                <i class="fas fa-bolt text-blue-600 text-xl"></i>
+                            </div>
+                            <span class="ml-3 text-sm font-semibold text-blue-600">INCIDENT RESPONSE</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cloud Incident Response</h3>
+                        <p class="text-gray-600 mb-4">
+                            Rapid response playbooks with forensic readiness for cloud-native environments.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>24/7 emergency response</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Cloud forensic investigations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Post-incident reviews</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-6 inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="relative h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Security Training">
+                        <div class="absolute inset-0 bg-blue-600 opacity-20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full">
+                                <i class="fas fa-graduation-cap text-blue-600 text-xl"></i>
+                            </div>
+                            <span class="ml-3 text-sm font-semibold text-blue-600">SECURITY TRAINING</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Security Awareness Training</h3>
+                        <p class="text-gray-600 mb-4">
+                            Customized security training programs for technical teams with hands-on cloud security labs.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Cloud security certifications prep</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Red team/blue team exercises</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Secure coding workshops</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-6 inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                        Ready to fortify your cloud infrastructure?
+                    </h2>
+                    <p class="mt-4 max-w-3xl text-lg">
+                        Our certified cloud security architects will conduct a comprehensive assessment of your environment and provide actionable recommendations.
+                    </p>
+                    <div class="mt-8 flex">
+                        <a href="#" class="bg-white text-blue-600 px-6 py-3 rounded-md text-lg font-semibold hover:bg-gray-100">
+                            Request Security Audit <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 lg:mt-0">
+                    <div class="bg-white bg-opacity-10 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold mb-4">Why Choose CloudShield Pro?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check-circle text-green-400"></i>
+                                </div>
+                                <p class="ml-3 text-base">
+                                    <span class="font-semibold">Former cloud platform security leads</span> with 10+ years average experience
+                                </p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check-circle text-green-400"></i>
+                                </div>
+                                <p class="ml-3 text-base">
+                                    <span class="font-semibold">Proven frameworks</span> aligned with CIS, NIST, ISO, and PCI standards
+                                </p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check-circle text-green-400"></i>
+                                </div>
+                                <p class="ml-3 text-base">
+                                    <span class="font-semibold">Multi-cloud expertise</span> across AWS, Azure, and GCP environments
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Security Architecture</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Compliance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">DevSecOps</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Threat Modeling</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Whitepapers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Webinars</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    <div class="mt-6">
+                        <p class="text-gray-400">Subscribe to our newsletter</p>
+                        <div class="mt-2 flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full">
+                            <button class="bg-blue-600 px-4 py-2 rounded-r-md hover:bg-blue-700">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Baz&BourkeCS All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
