@@ -8,26 +8,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-blue: #0a2463;
-            --secondary-blue: #3e7cb1;
-            --accent-blue: #dbe4ee;
-        }
-        body {
-            font-family: 'IBM Plex Sans', sans-serif;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(10, 36, 99, 0.2);
-        }
-        .logo-text {
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-    </style>
+        <style>
+    :root {
+        --primary-black: #181818;      /* Deep black for backgrounds */
+        --secondary-silver: #C0C0C0;   /* Classic silver */
+        --accent-white: #FFFFFF;       /* Pure white for contrast */
+    }
+    body {
+        font-family: 'IBM Plex Sans', sans-serif;
+        background-color: var(--primary-black);
+        color: var(--accent-white);
+    }
+    .hero-gradient {
+        /* Gradient from black to silver for hero sections */
+        background: linear-gradient(135deg, var(--primary-black) 0%, var(--secondary-silver) 100%);
+    }
+    .service-card {
+        background: var(--secondary-silver);
+        color: var(--primary-black);
+        border-radius: 8px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px rgba(24, 24, 24, 0.08);
+    }
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(24, 24, 24, 0.2);
+    }
+    .logo-text {
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        color: var(--secondary-silver);
+        text-shadow: 1px 1px 2px var(--primary-black);
+    }
+    /* Optional: Links and buttons for theme consistency */
+    a, .btn {
+        color: var(--accent-white);
+        background-color: var(--primary-black);
+        border: 1px solid var(--secondary-silver);
+        transition: background 0.2s, color 0.2s;
+    }
+    a:hover, .btn:hover {
+        color: var(--primary-black);
+        background-color: var(--secondary-silver);
+    }
+</style>
+    
     <script>
         tailwind.config = {
             theme: {
